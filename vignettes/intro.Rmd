@@ -1,0 +1,46 @@
+---
+title: "intro"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{intro}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(ape)
+library(rotl)
+library(dplyr)
+library(datelife)
+library(BiocManager)
+library(ggtree)
+```
+
+```{r}
+asco_tree <- read.tree(file = "../data-raw/asco.tre")
+```
+
+```{r}
+ggtree(asco_tree)
+```
+
+```{r, fig.height = 20, fig.width = 10}
+plot.phylo(asco_tree)
+```
+
+
+
+
+
+
+
+
+
+
