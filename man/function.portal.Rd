@@ -5,7 +5,7 @@
 \alias{function.portal}
 \title{Taxonomy of species sampled}
 \format{
-A data frame with 10 number of columns and 54 number of rows
+A data frame with 10 columns and 54 rows
 }
 \source{
 \url{https://lunasare.github.io/spring2023-data-science/data/portal-species-taxonomy.csv}

@@ -4,8 +4,8 @@
 #' for easy reuse and reanalysis.
 #'
 #' @docType package
-#' @name portaldata
-#' @aliases portaldata portaldata-package
+#' @name TreesPackage
+#' @aliases TreesPackage TreesPackage-package
 NULL
 
 #' Taxonomy of species sampled
@@ -14,6 +14,6 @@ NULL
 #' We followed the taxonomy from the Open Tree of Life .
 #'
 #' @source \url{https://lunasare.github.io/spring2023-data-science/data/portal-species-taxonomy.csv}
-#' @format A data frame with 10 number of columns and 54 number of rows
+#' @format A data frame with 10 columns and 54 rows
 "function.portal"
 

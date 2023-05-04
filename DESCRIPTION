@@ -2,8 +2,8 @@ Package: TreesPackage
 Type: Package
 Title: Analyzes data for the Ascothoracidae
 Version: 0.1.0
-Author@R: person("Charles J.", "Hu", email = "charles.hu27@gmail.com", role=c("aut", "cre"))
-Maintainer: charles.hu27@gmail.com
+Authors@R: person("Charles J.", "Hu", email = "charles.hu27@gmail.com", role = c("aut", "cre"))
+Maintainer: Charles J. Hu <charles.hu27@gmail.com>
 Description: More about what it does (maybe more than one line)
     Use four spaces when indenting paragraphs within the Description.
 License: GPL
