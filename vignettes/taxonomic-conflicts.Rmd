@@ -1,0 +1,60 @@
+---
+title: "taxonomic-conflicts"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{taxonomic-conflicts}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(ape)
+library(rotl)
+library(dplyr)
+library(datelife)
+library(BiocManager)
+library(ggtree)
+```
+
+# Fun Function
+```{r}
+treeplotcustom <- function(file){
+  temp <- read.tree(file)
+  plot(temp)
+}
+```
+
+# Tree from Perez-Losada, 2009
+```{r, fig.height = 20, fig.width = 15}
+treeplotcustom("../data-raw/perez-losada.txt")
+```
+
+
+
+#Tree from Perez-Losada, 2012
+```{r, fig.height = 20, fig.width = 15}
+treeplotcustom("../data-raw/pl2.txt") 
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
