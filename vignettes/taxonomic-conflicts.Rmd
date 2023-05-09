@@ -22,6 +22,11 @@ library(datelife)
 library(BiocManager)
 library(ggtree)
 ```
+# Let us examine the two different trees available for Ascothoracida.
+
+# Function treeplotcustom
+A function that plots a tree directly from filename. Takes in the file path and outputs tree.
+
 
 # Fun Function
 ```{r}

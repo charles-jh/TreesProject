@@ -22,3 +22,87 @@ library(datelife)
 library(BiocManager)
 library(ggtree)
 ```
+
+# Let us compare the two trees.
+## Using the comparePhylo function, which comes as a part of ape, we will examine some attributes of the trees.
+```{r}
+twenty9 <- read.tree("../data-raw/perez-losada.txt")
+twenty12 <- read.tree("../data-raw/pl2.txt")
+```
+
+
+```{r}
+comparePhylo(twenty9, twenty12)
+comp1 <- comparePhylo(twenty9, twenty12)
+```
+
+```{r}
+head(comp1)
+```
+
+## We see that there are only two splits which differ between the trees.
+
+# Next, we test with all.equal.phylo
+```{r}
+gremp <- all.equal.phylo(twenty9, twenty12, index.return = TRUE)
+```
+
+```{r}
+gremp[2, 1]
+```
+
+```{r}
+difff <- 0
+for(i in gremp){
+    if(gremp[i, 1] == gremp[i, 2]){
+      difff <- difff + 1
+    }
+}
+
+difff
+```
+ 
+ 
+ 
+ 
+# Function: phyloDiffr
+```{r}
+phyloDiffr <- function(currentip, targetip){
+  diffs <- 0
+  temp <- all.equal.phylo(currentip, targetip, index.return = TRUE)
+  if(all.equal.phylo(currentip, targetip) == FALSE){
+    return("different lengths, trees are most likely different")
+  }else{
+    for(i in temp){
+      if(temp[i, 1] != temp[i, 2]){
+        diffs <- diffs + 1
+      }
+    }
+    return(diffs)
+  }
+  
+}
+```
+
+```{r}
+phyloDiffr(twenty9, twenty12)
+```
+```{r}
+phyloDiffr(read.tree("../data-raw/ast.tre"), read.tree("../data-raw/pst.tre"))
+```
+```{r}
+all.equal.phylo(read.tree("../data-raw/ast.tre"), read.tree("../data-raw/pst.tre"), index.return = TRUE)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
